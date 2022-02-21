@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  background: #06c8f9;
+
+  background: linear-gradient(#255bff 0%, #142f7e 100%);
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #111;
+  color: #eff;
+}
+
+nav {
+  display: flex;
+  flex: 0 0;
+  width: 100%;
+  gap: 3rem;
+  font-size: 2rem;
+  padding: 2rem 0 1rem;
+  width: 100%;
+  justify-content: space-between;
+
+  & > div {
+    display: flex;
+    gap: 2rem;
+  }
+
+  a {
+    color: #06c8f9;
+
+    &:hover {
+      color: #eff;
+    }
+  }
+}
+
+.burger {
+  user-select: none;
+  cursor: pointer;
+  color: #06c8f9;
+
+  &:hover {
+    color: #eff;
+  }
+}
+
+main {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 920px;
+  padding: 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 2rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  background: none;
+  color: currentColor;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+  flex: 0 0;
+
+  &:hover {
+    transform: scale(1.4);
+    color: red;
+  }
+
+  &:nth-of-type(2):hover {
+    color: lime;
+  }
+}
+
+aside {
+  position: absolute;
+  top: 4.5rem;
+  right: 2rem;
+  width: calc(100% - 4rem);
+  max-width: 400px;
+  background-color: #0d43e3;
+  display: 'none';
+  flex-direction: column;
+  padding: 1rem;
+  color: #eff;
+  animation: pop 150ms ease-in-out;
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.9);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  & > a {
+    font-size: 1.5rem;
+    color: currentColor;
+    margin: 0 0 1rem;
+  }
+
+  & > a:hover {
+    color: #06c8f9;
+  }
+}
+
+// COUNTER
+
+.counter-main {
+  display: flex;
+  justify-items: center;
+  width: 100%;
+  max-width: 460px;
+  align-items: center;
+
+  > div {
+    flex: 1;
+    text-align: center;
+    font-size: 4rem;
+  }
+}
