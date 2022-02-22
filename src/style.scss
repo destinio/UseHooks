@@ -16,7 +16,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 920px;
+  max-width: 56rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -31,6 +31,7 @@ body {
 
 nav {
   display: flex;
+  position: relative;
   flex: 0 0;
   width: 100%;
   gap: 3rem;
@@ -38,6 +39,7 @@ nav {
   padding: 2rem 0 1rem;
   width: 100%;
   justify-content: space-between;
+  color: #eff;
 
   & > div {
     display: flex;
@@ -45,21 +47,30 @@ nav {
   }
 
   a {
-    color: #06c8f9;
-
+    color: lightblue;
+    position: relative;
     &:hover {
       color: #eff;
     }
+
+    // &::after {
+    //   content: 'º';
+    //   position: absolute;
+    //   bottom: -2rem;
+    //   left: 0;
+    //   width: 100%;
+    //   // transform: translateX(50%);
+    //   text-align: center;
+    // }
   }
 }
 
 .burger {
   user-select: none;
   cursor: pointer;
-  color: #06c8f9;
 
   &:hover {
-    color: #eff;
+    color: rgb(238, 238, 238);
   }
 }
 
@@ -67,7 +78,7 @@ main {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: 920px;
+  max-width: 56rem;
   padding: 2rem 2rem 0;
   display: flex;
   flex-direction: column;
@@ -110,13 +121,16 @@ aside {
   top: 4.5rem;
   right: 2rem;
   width: calc(100% - 4rem);
-  max-width: 400px;
+  max-width: 15rem;
   background-color: #0d43e3;
   display: 'none';
   flex-direction: column;
   padding: 1rem;
   color: #eff;
   animation: pop 150ms ease-in-out;
+  text-align: center;
+  border-radius: 1rem;
+  border: 2px solid #06c8f9;
 
   @keyframes pop {
     0% {
@@ -136,10 +150,14 @@ aside {
     font-size: 1.5rem;
     color: currentColor;
     margin: 0 0 1rem;
+    text-decoration: none;
+    display: block;
+    transition: all 150ms ease-in-out;
   }
 
   & > a:hover {
     color: #06c8f9;
+    transform: scale(1.1);
   }
 }
 
